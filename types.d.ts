@@ -1,0 +1,4 @@
+type ComponentProps = {
+  params: {};
+  fields: {};
+};
