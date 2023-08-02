@@ -27,7 +27,12 @@ const Model = ({
         )}
         onClick={() => setIsClose((prev) => !prev)}
       ></div>
-      <div className={`relative z-10  shadow-md w-fit rounded-md ${classes}`}>
+      <div
+        className={classNames(
+          `relative z-10 bg-white shadow-md w-fit rounded-md `,
+          classes
+        )}
+      >
         {/* cross Button */}
         {closeBtn && <CloseBtn setIsClose={setIsClose} />}
         {/* ...Rest Of Childrens */}
@@ -43,10 +48,10 @@ const CloseBtn = ({ setIsClose }: Partial<modelProps>) => {
   }
   return (
     <span
-      className={`bg-red-500 rounded-full w-[25px] h-[25px] absolute -top-3 right-0 flex items-center justify-center `}
+      className={` bg-white shadow-md rounded-full w-[25px] h-[25px] absolute -top-3 right-0 flex items-center justify-center cursor-pointer`}
       onClick={() => setIsClose((prev) => !prev)}
     >
-      <GrClose className="text-gray-50" />
+      <GrClose />
     </span>
   );
 };

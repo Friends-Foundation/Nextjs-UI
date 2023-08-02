@@ -18,6 +18,12 @@ const Dropdown = ({
 }: dropdownProps) => {
   const [isClose, setIsClose] = React.useState(false);
   const [optionValue, setOptionValue] = React.useState("All Locations");
+
+  const handleClose = (value: string) => {
+    setOptionValue(value);
+    setIsClose(false);
+  };
+
   return (
     <div>
       <button
@@ -43,7 +49,7 @@ const Dropdown = ({
         >
           <ul className="mt-1 cursor-pointer py-2">
             <li
-              onClick={() => setOptionValue("All Locations")}
+              onClick={() => handleClose("All Locations")}
               className={classNames(
                 "px-4 py-2",
                 "hover:bg-slate-200 hover:text-slate-950"
@@ -55,7 +61,7 @@ const Dropdown = ({
               .fill(0)
               .map((v, idx) => (
                 <li
-                  onClick={() => setOptionValue("My Home " + (idx + 1))}
+                  onClick={() => handleClose("My Home " + (idx + 1))}
                   className={classNames(
                     "px-4 py-2",
                     "hover:bg-slate-200 hover:text-slate-950"
