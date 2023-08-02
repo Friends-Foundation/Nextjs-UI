@@ -7,6 +7,7 @@ const dropdownData: dropdownProps = {
   background: "#111111",
   numberOfOptions: 6,
   CloseBtn: false,
+  isBackground: true,
 };
 
 export default dropdownData;

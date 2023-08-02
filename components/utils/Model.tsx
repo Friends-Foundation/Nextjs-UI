@@ -1,21 +1,33 @@
+import classNames from "classnames";
 import React from "react";
 import { GrClose } from "react-icons/gr";
 
-type modelProps = {
+export type modelProps = {
   children: React.ReactNode;
   closeBtn: boolean;
   setIsClose: React.Dispatch<React.SetStateAction<boolean>>;
-  classes: string;
+  classes?: string;
+  isBackground: boolean;
 };
 
-const Model = ({ children, closeBtn, setIsClose, classes }: modelProps) => {
+const Model = ({
+  children,
+  closeBtn,
+  setIsClose,
+  classes,
+  isBackground,
+}: modelProps) => {
   return (
     <>
+      {/* Close Background: by Clicking outside model this will help to close */}
       <div
-        className={`z-[9] absolute w-full h-full top-0 left-0 `}
+        className={classNames(
+          `z-[9] opacity-5 absolute w-full h-full top-0 left-0`,
+          isBackground && "bg-slate-950 "
+        )}
         onClick={() => setIsClose((prev) => !prev)}
       ></div>
-      <div className={`relative z-10 bg-slate-50 shadow-sm w-fit ${classes}`}>
+      <div className={`relative z-10  shadow-md w-fit rounded-md ${classes}`}>
         {/* cross Button */}
         {closeBtn && <CloseBtn setIsClose={setIsClose} />}
         {/* ...Rest Of Childrens */}

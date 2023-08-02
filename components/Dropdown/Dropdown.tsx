@@ -8,9 +8,14 @@ export type dropdownProps = ComponentProps & {
   background: string;
   numberOfOptions: number;
   CloseBtn: boolean;
+  isBackground: boolean;
 };
 
-const Dropdown = ({ background, numberOfOptions, CloseBtn }: dropdownProps) => {
+const Dropdown = ({
+  isBackground,
+  numberOfOptions,
+  CloseBtn,
+}: dropdownProps) => {
   const [isClose, setIsClose] = React.useState(false);
   const [optionValue, setOptionValue] = React.useState("All Locations");
   return (
@@ -30,7 +35,12 @@ const Dropdown = ({ background, numberOfOptions, CloseBtn }: dropdownProps) => {
       </button>
 
       {isClose && (
-        <Model setIsClose={setIsClose} closeBtn={CloseBtn} classes="">
+        <Model
+          isBackground={isBackground}
+          setIsClose={setIsClose}
+          closeBtn={CloseBtn}
+          classes=""
+        >
           <ul className="mt-1 cursor-pointer py-2">
             <li
               onClick={() => setOptionValue("All Locations")}
