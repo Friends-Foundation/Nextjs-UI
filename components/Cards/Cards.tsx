@@ -26,7 +26,10 @@ const Cards = ({
       {Array(numberofCards)
         .fill(0)
         .map((temp, i) => (
-          <div className="card rounded-lg shadow-lg max-w-sm m-4" key={i}>
+          <div
+            className="card rounded-lg shadow-lg max-w-sm m-4 hover:cursor-pointer"
+            key={i}
+          >
             <Image
               src="https://picsum.photos/200/300"
               alt="card-image"
@@ -41,7 +44,7 @@ const Cards = ({
                 <strong>By</strong>
                 {authorName}
               </span>
-              <p className="txt-sm">{description}</p>
+              <p className="txt-xs break-words">{description}</p>
               <p className="text-gray-500">{date}</p>
             </div>
           </div>
