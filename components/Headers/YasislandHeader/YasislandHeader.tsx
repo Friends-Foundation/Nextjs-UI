@@ -12,11 +12,11 @@ import { AiOutlineUser } from "react-icons/ai";
 import localFont from "next/font/local";
 
 
-export interface YasislandHeaderProps {
+export type YasislandHeaderProps= {
   fields: {
     logo: Logo;
-    languages: Languages;
-    navlinks: Navlink[];
+    languages?: Languages;
+    navlinks?: Navlink[];
   };
 }
 
@@ -43,7 +43,7 @@ export interface Language {
 }
 
 export interface Navlink {
-  navInfo: NavInfo;
+  navInfo?: NavInfo;
 }
 
 export interface NavInfo {
@@ -57,16 +57,12 @@ export interface FeaturedLink {
 }
 export interface NavLink {
   label: string;
-  linkData: LinkDaum[];
+  linkData?: LinkDaum[];
   ctaDetails?: CtaDetails;
 }
 
 export interface LinkDaum {
-  ctaDetail: CtaDetail;
-}
-export interface CtaDetail {
-  href: string;
-  label: string;
+  ctaDetail: CtaDetails;
 }
 
 export interface CtaDetails {
@@ -76,6 +72,7 @@ export interface CtaDetails {
 
 const babas = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 const ddin = localFont({ src: "./static/DINCond-Regular Regular.otf" });
+
 export default function YasislandHeader({ fields }: YasislandHeaderProps) {
   const [activeLanguage, setActiveLanguage] = useState("");
   const [activeLink, setActiveLink] = useState(-1);
