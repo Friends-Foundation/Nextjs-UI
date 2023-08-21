@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/32x32/Hambuger menu@0.5x</title>
+    <g id="Icons/32x32/Hambuger-menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group" transform="translate(0.000000, 4.000000)" stroke="#FFFFFF" stroke-width="2.8">
+            <line x1="0.29065097" y1="0.972304687" x2="31.8055869" y2="0.75" id="Path-3"></line>
+            <line x1="0.29065097" y1="11.9723047" x2="31.8055869" y2="11.75" id="Path-3-Copy"></line>
+            <line x1="0.29065097" y1="22.9723047" x2="31.8055869" y2="22.75" id="Path-3-Copy-2"></line>
+        </g>
+    </g>
+</svg>
